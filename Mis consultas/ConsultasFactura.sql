@@ -40,17 +40,21 @@ where fv.idFacturaVenta =8
 declare @idFactura int
 set @idFactura = 3
 select 
+dp.pedidoVenta_idPedido ,
 (select concat(c.primerNombre,' ',c.primerApellido) from cliente c where c.idcliente=pv.cliente_idcliente) as cliente,
 (select c.numeroDui from cliente c where c.idcliente=pv.cliente_idcliente) as dui,
 dp.cantidad ,
-dp.
+(select p.nombreProducto from producto p where p.idproducto=dp.producto_idproducto) as producto,
+dp.precioUnitario ,
+dp.precioTotal 
 from facturasVentas fv 
 inner join pedidoVenta pv 
 on fv.pedidoVenta_idPedido = pv.idPedido
 inner join detallePedido dp 
-on pv.idPedido = dp.pedidoVenta_idPedido 
+on pv.idPedido = dp.pedidoVenta_idPedido
+--where fv.idFacturaVenta = @idFactura
+ORDER by dp.pedidoVenta_idPedido 
 
-where fv.idFacturaVenta = @idFactura
 
 
 
