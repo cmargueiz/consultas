@@ -1,0 +1,12 @@
+declare @fecha date=(convert(date,SYSDATETIME()))
+--insert into categoria
+insert into subcategoria values(1,	1,	'LIMPIEZA',	        @fecha,	1,	'',	 '001')
+insert into subcategoria values(2,	1,	'PAPELERIA',	    @fecha,	1,	'',	 '001')
+insert into subcategoria values(3,	2,	'MOTO',	            @fecha,	1,	'',	 '001')
+insert into subcategoria values(4,	2,	'LIVIANO',	        @fecha,	1,	'',	 '001')
+insert into subcategoria values(5,	2,	'PESADO',	        @fecha,	1,	'',	 '001')
+insert into subcategoria values(6,	3,	'AROS',	            @fecha,	1,	'',	 '001')
+insert into subcategoria values(7,	3,	'LENTES',	        @fecha,	1,	'',	 '001')
+insert into subcategoria values(8,	3,	'INSUMOS MEDICOS',	@fecha,	1,	'',	 '001')
+insert into subcategoria values(9,	4,	'OFTALMOLOGIA',	    @fecha,	1,	'',	 '001')
+insert into subcategoria values(10,	4,	'GENERAL',	        @fecha,	1,	'',	 '001')
