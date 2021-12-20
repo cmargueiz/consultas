@@ -13,3 +13,5 @@ on z.idzona = dc.zona_idzona
 inner join cliente c 
 on dc.cliente_idcliente = c.idcliente
 where c.idcliente = '000000000003';
+
+
