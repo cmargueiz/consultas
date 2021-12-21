@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt_solicitudCreditoIndividual" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="01f0b4e4-8750-4b58-b6ab-04d9e42d2d86">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<parameter name="idInfoServicio" class="java.lang.String"/>
+	<parameter name="idLineaServicio" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * from infoServicio is2 ;]]>
+	</queryString>
+	<field name="idinfoServicio" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="idinfoServicio"/>
+		<property name="com.jaspersoft.studio.field.label" value="idinfoServicio"/>
+	</field>
+	<field name="oficina_idoficina" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="oficina_idoficina"/>
+		<property name="com.jaspersoft.studio.field.label" value="oficina_idoficina"/>
+	</field>
+	<field name="cliente_idcliente" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cliente_idcliente"/>
+		<property name="com.jaspersoft.studio.field.label" value="cliente_idcliente"/>
+	</field>
+	<field name="estado" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="estado"/>
+		<property name="com.jaspersoft.studio.field.label" value="estado"/>
+	</field>
+	<field name="zona_idzona" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="zona_idzona"/>
+		<property name="com.jaspersoft.studio.field.label" value="zona_idzona"/>
+	</field>
+	<field name="lineaServicio_idlineaServicio" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="lineaServicio_idlineaServicio"/>
+		<property name="com.jaspersoft.studio.field.label" value="lineaServicio_idlineaServicio"/>
+	</field>
+	<field name="fechaReg" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fechaReg"/>
+		<property name="com.jaspersoft.studio.field.label" value="fechaReg"/>
+	</field>
+	<field name="fechaMod" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fechaMod"/>
+		<property name="com.jaspersoft.studio.field.label" value="fechaMod"/>
+	</field>
+	<field name="fechaVen" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fechaVen"/>
+		<property name="com.jaspersoft.studio.field.label" value="fechaVen"/>
+	</field>
+	<field name="montoSol" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="montoSol"/>
+		<property name="com.jaspersoft.studio.field.label" value="montoSol"/>
+	</field>
+	<field name="montoSug" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="montoSug"/>
+		<property name="com.jaspersoft.studio.field.label" value="montoSug"/>
+	</field>
+	<field name="montoApr" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="montoApr"/>
+		<property name="com.jaspersoft.studio.field.label" value="montoApr"/>
+	</field>
+	<field name="diaAtr" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="diaAtr"/>
+		<property name="com.jaspersoft.studio.field.label" value="diaAtr"/>
+	</field>
+	<field name="calif" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="calif"/>
+		<property name="com.jaspersoft.studio.field.label" value="calif"/>
+	</field>
+	<field name="usuario_idusuario" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="usuario_idusuario"/>
+		<property name="com.jaspersoft.studio.field.label" value="usuario_idusuario"/>
+	</field>
+	<field name="saldoActual" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="saldoActual"/>
+		<property name="com.jaspersoft.studio.field.label" value="saldoActual"/>
+	</field>
+	<field name="saldoAnterior" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="saldoAnterior"/>
+		<property name="com.jaspersoft.studio.field.label" value="saldoAnterior"/>
+	</field>
+	<field name="periodo" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="periodo"/>
+		<property name="com.jaspersoft.studio.field.label" value="periodo"/>
+	</field>
+	<field name="plazo" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="plazo"/>
+		<property name="com.jaspersoft.studio.field.label" value="plazo"/>
+	</field>
+	<field name="cuotas" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="cuotas"/>
+		<property name="com.jaspersoft.studio.field.label" value="cuotas"/>
+	</field>
+	<field name="idusuario_analista" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="idusuario_analista"/>
+		<property name="com.jaspersoft.studio.field.label" value="idusuario_analista"/>
+	</field>
+	<field name="idgrupo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="idgrupo"/>
+		<property name="com.jaspersoft.studio.field.label" value="idgrupo"/>
+	</field>
+	<field name="tipoPeriodo" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="tipoPeriodo"/>
+		<property name="com.jaspersoft.studio.field.label" value="tipoPeriodo"/>
+	</field>
+	<field name="graciaDias" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="graciaDias"/>
+		<property name="com.jaspersoft.studio.field.label" value="graciaDias"/>
+	</field>
+	<field name="garantia" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="garantia"/>
+		<property name="com.jaspersoft.studio.field.label" value="garantia"/>
+	</field>
+	<field name="fechaCuota1" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fechaCuota1"/>
+		<property name="com.jaspersoft.studio.field.label" value="fechaCuota1"/>
+	</field>
+	<field name="fechaDesembolso" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fechaDesembolso"/>
+		<property name="com.jaspersoft.studio.field.label" value="fechaDesembolso"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="51" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="50" height="50" uuid="cfee74fc-5c83-4833-9320-749e2a011aff"/>
+				<imageExpression><![CDATA["/home/devgamer/eclipse-workspace/SIACE_V2/src/reportes/invoice_logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="151" y="10" width="270" height="30" uuid="a72fe10e-2607-4f8b-a9a3-f0379518c95c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[INSTRUMENTO DE APROBACIÓN DEL CRÉDITO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="700" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="0" y="0" width="80" height="20" uuid="ae85790d-d471-454e-9c24-a2c8aa7a4c4f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Fondo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="100" height="20" uuid="ca3ef299-7cf6-4ade-a34d-c4d97f3f6335">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Número de Crédito]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="55" width="100" height="20" uuid="bde11172-b60c-4ab8-832c-ef589d800b74">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[en Tramite:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="75" width="80" height="20" uuid="0dce6c48-8990-4edb-a3e0-2cf4ef818df9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Linea de Crédito:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="80" height="20" uuid="d4fa88cf-6304-4db3-834c-4569aed62e5c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Clase de Crédito:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="95" width="80" height="20" uuid="6c95c7d6-553f-4513-97bc-ee35a1d939dd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Grupo:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="230" y="-1" width="340" height="131" uuid="f0b75176-0382-4e03-80c6-4c6cb10a3606"/>
+			</rectangle>
+			<line>
+				<reportElement x="230" y="75" width="340" height="1" uuid="cadca36e-c7b0-46e8-a420-08b250afb3b8"/>
+			</line>
+			<staticText>
+				<reportElement x="240" y="10" width="280" height="20" uuid="a01d9bd3-c07f-43a1-b78c-69b79a88e3a8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1. MONTO APROBADO DOLARES (EN NÚMERO Y LETRAS)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="80" width="120" height="20" uuid="4b4dd410-3c23-43a2-ad82-76105a424342">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[3. TASA INTERÉS NORMAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="80" width="140" height="20" uuid="4ae91458-baaf-4d46-8643-8bd42af4a143">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[3. TASA INTERÉS POR MORA]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="130" width="570" height="80" uuid="d95d9c50-5d75-4465-a29e-92875543646b"/>
+			</rectangle>
+			<line>
+				<reportElement x="0" y="170" width="230" height="1" uuid="33be1353-d5b4-4c85-b233-2e289b02eb99"/>
+			</line>
+			<staticText>
+				<reportElement x="10" y="130" width="200" height="20" uuid="cee55751-7a4d-4f8d-a1e2-b2c596ee7e37">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2. NOMBRE(S) DE CLIENTE SEGÚN DUI:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="170" width="120" height="20" uuid="1204f70d-cd38-4047-943c-3dc7e17646d2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[5. PLAZO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="130" width="120" height="20" uuid="cb991884-32f6-49e1-86be-844b598b55b2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[6. VALOR CUOTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="421" y="130" width="120" height="20" uuid="0a46731c-dcde-4f86-acf6-f0af02bea68a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[7. FORMAS PAGO]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="210" width="570" height="40" uuid="758d1c11-506b-43ae-9071-32db4339d301">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="10" y="210" width="120" height="20" uuid="f16c2c90-7ccc-4158-bc4c-703d8d869a5a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[8. DESTINO DEL CRÉDITO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="210" width="120" height="20" uuid="f1fb4d6c-1fca-49df-b149-e8018738f68d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[9. TIPO DE GARANTIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="250" width="190" height="20" uuid="b128aa77-7848-482c-9624-969b57838cc4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[10. COMISIONES, GASTOS Y DESCUENTOS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="230" y="130" width="1" height="360" uuid="252f642e-ab4d-4a57-ab03-87ec4ce6e65b"/>
+			</line>
+			<subreport>
+				<reportElement x="0" y="270" width="230" height="125" uuid="7fbe4bf2-f25c-4896-945c-c539aa297838">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<subreportParameter name="idLineaServicio">
+					<subreportParameterExpression><![CDATA[$P{idLineaServicio}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["rpt_gastosCuota.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="0" y="395" width="230" height="125" uuid="c9ae1db7-d104-4a49-983a-d306d27ab863">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<subreportParameter name="idLineaServicio">
+					<subreportParameterExpression><![CDATA[$P{idLineaServicio}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["rpt_gastos.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</pageHeader>
+</jasperReport>
