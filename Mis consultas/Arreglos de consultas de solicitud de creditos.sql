@@ -21,6 +21,8 @@ SELECT
 
 from infoServicio is2; 
 
+-- Auto-generated SQL script #202201030918
+UPDATE ProFac_pruebas.dbo.infoServicio	SET fuentFondo=N'FONDOS PROPIOS' ;
 
 
 

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rpt_gastos" language="javascript" pageWidth="111" pageHeight="113" columnWidth="111" leftMargin="0" rightMargin="0" topMargin="2" bottomMargin="2" uuid="ecbc980a-ae91-44df-bd20-dfdd72cef18f">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="0"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="1000"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<parameter name="idLineaServicio" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT 
+tg.nombre ,
+gls.montoValor ,
+gls.montoPorcentaje 
+from gastoLineaServicio gls
+inner join tipoGastos tg 
+on gls.tipoGastos_idtipoGasto = tg.idtipoGasto 
+where gls.lineaServicio_idlineaServicio =$P{idLineaServicio}  and gls.formaCobro = 1]]>
+	</queryString>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="tipoGastos"/>
+	</field>
+	<field name="montoValor" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="montoValor"/>
+		<property name="com.jaspersoft.studio.field.label" value="montoValor"/>
+	</field>
+	<field name="montoPorcentaje" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="montoPorcentaje"/>
+		<property name="com.jaspersoft.studio.field.label" value="montoPorcentaje"/>
+	</field>
+	<variable name="montoValor1" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{montoValor}]]></variableExpression>
+	</variable>
+	<variable name="montoPorcentaje1" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{montoPorcentaje}]]></variableExpression>
+	</variable>
+	<variable name="montoValor2" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{montoValor}]]></variableExpression>
+	</variable>
+	<variable name="montoPorcentaje2" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{montoPorcentaje}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="9">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="23" y="-1" width="71" height="10" uuid="c0d98dd0-4e26-4258-a49c-e8908e5435f7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5dd89d07-884e-4714-9bb1-83cdfa6816b0"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EN CUOTA]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="9">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="70" y="0" width="20" height="9" uuid="e1195e1e-106f-4d43-b8c6-f98427dbeef1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5dd89d07-884e-4714-9bb1-83cdfa6816b0"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="0" width="20" height="9" uuid="66516fb0-d03a-462b-971c-8367f6bb52af">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5dd89d07-884e-4714-9bb1-83cdfa6816b0"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="0" width="71" height="9" uuid="87af1891-ad94-4a71-aab7-a4cac3c4c40e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5dd89d07-884e-4714-9bb1-83cdfa6816b0"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gasto]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="9" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="90" y="0" width="20" height="9" uuid="a501548a-53ed-4c52-8a7c-1071ff175961">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{montoValor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="7" y="0" width="63" height="9" uuid="d8a436b3-3e47-415c-9e69-e2d85d5da19a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="0" width="20" height="9" uuid="ede19202-62f7-4505-a5fb-3cd8a632c707">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5dd89d07-884e-4714-9bb1-83cdfa6816b0"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{montoPorcentaje}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="0" y="1" width="7" height="7" uuid="36c6516d-9957-449a-8d4d-351b2cb0d055">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["/home/devgamer/Descargas/2713.png"]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<summary>
+		<band height="9">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="90" y="0" width="19" height="9" uuid="9edb727a-1033-4670-8e65-ed756c1c72ce">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{montoValor2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="0" width="20" height="9" uuid="1c0327f5-13fd-41d4-9d97-5d48e2815dd3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="5"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{montoPorcentaje2}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="7" y="0" width="101" height="1" uuid="9e0c8057-4654-4c35-b7b3-0b0cc4347741">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="0" width="66" height="9" uuid="a602906d-65fe-441b-96b0-f44519507b6c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5dd89d07-884e-4714-9bb1-83cdfa6816b0"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="5" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sub Total Gastos]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
