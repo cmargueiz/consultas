@@ -2,8 +2,7 @@ declare @idInfoServicio varchar(18),@idCliente varchar(12),@idLineaServicio varc
 set @idInfoServicio = '001001000000000033' 
 set @idLineaServicio = '0010700'
 set @idCliente = ''
-declare @numCredito int
-set @numCredito = (select COUNT(*) from infoServicio i2 WHERE i2.cliente_idcliente = @idCliente)
+declare @numCredito int = (select COUNT(*) from infoServicio i2 WHERE i2.cliente_idcliente = @idCliente)
 declare @gastoDesembolso float = (SELECT sum(gls.montoValor) from gastoLineaServicio gls where gls.lineaServicio_idlineaServicio =@idLineaServicio  and gls.formaCobro = 0)
 declare @gastoCoutas float = (SELECT sum(gls.montoPorcentaje) from gastoLineaServicio gls where gls.lineaServicio_idlineaServicio =@idLineaServicio  and gls.formaCobro = 1)
 select
